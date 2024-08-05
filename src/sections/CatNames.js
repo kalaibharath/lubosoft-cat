@@ -50,7 +50,7 @@ const CatNames = () => {
       });
       fetchCatNames();
       setNewCatName('');
-      showToast('Cat name added successfully', 'success');
+      showToast('Category added successfully', 'success');
     } catch (error) {
       console.error('Error adding cat name:', error);
       showToast('Failed to add cat name', 'error');
@@ -73,9 +73,9 @@ const CatNames = () => {
       fetchCatNames();
       setEditCatName(null);
       setEditValue('');
-      showToast('Cat name updated successfully', 'success');
+      showToast('Category updated successfully', 'success');
     } catch (error) {
-      console.error('Error updating cat name:', error);
+      console.error('Error updating category', error);
       showToast('Failed to update cat name', 'error');
     }
   };
@@ -90,9 +90,9 @@ const CatNames = () => {
         deleted_flg: 'D'
       });
       setCatNames(catNames.filter(cat => cat.MAIN_CAT_ID !== id));
-      showToast('Cat name deleted successfully', 'success');
+      showToast('Category deleted successfully', 'success');
     } catch (error) {
-      console.error('Error deleting cat name:', error);
+      console.error('Error deleting category', error);
       showToast('Failed to delete cat name', 'error');
     }
   };
@@ -113,13 +113,13 @@ const CatNames = () => {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'monospace' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Cat Names Manager</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Category Manager</h1>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <input
           type="text"
           value={editCatName ? editValue : newCatName}
           onChange={(e) => editCatName ? setEditValue(e.target.value) : setNewCatName(e.target.value)}
-          placeholder="Add a new cat name"
+          placeholder="Add a new category name"
           style={{
             padding: '10px', fontSize: '16px', marginRight: '10px',
             borderRadius: 5,
@@ -163,7 +163,7 @@ const CatNames = () => {
             borderBottom: '1px solid #ccc', backgroundColor: '#e3f2fd', marginBottom: 10,
             borderRadius: 5
           }}>
-            <strong>Cat Name</strong>
+            <strong>Category Name</strong>
             <strong>Actions</strong>
           </div>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
