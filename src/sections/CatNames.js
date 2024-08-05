@@ -193,7 +193,10 @@ const CatNames = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span>{cat.MAIN_CAT_NAME}</span>
-                  <div>
+                  <div style={{
+                    display: 'flex', justifyContent: 'center', alignItems: 'center',
+                    marginLeft: '10px'
+                  }}>
                     <FaEdit
                       color='black'
                       style={{ cursor: 'pointer', marginRight: '10px' }}
